@@ -1,10 +1,10 @@
+import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class CalculatorAdvancedTests {
-
     Calculator calculator = new Calculator();
     private int firstNumber;
     private int secondNumber;
@@ -18,13 +18,13 @@ public class CalculatorAdvancedTests {
     }
 
     @Test
-    public void shouldCreateCalculatorWithSetUpValues() {
+    public void testShouldCreateCalculatorWithSetUpValues() {
         assertEquals(100, calculator.getFirstNumber());
         assertEquals(200, calculator.getSecondNumber());
     }
 
     @Test
-    public void shouldReturnCorrectSum() {
+    public void testShouldReturnCorrectSum() {
         assertEquals(300, calculator.calculateSum());
     }
 }
